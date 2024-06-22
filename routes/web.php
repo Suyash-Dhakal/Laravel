@@ -1,15 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[PageController::class,'ShowUserHome']);
 
-Route::get('/About', function () {
-    return view('about');
-});
+Route::get('/About',[PageController::class,'ShowUserAbout']);
 
-Route::get('/Post', function () {
-    return view('post');
-});
+Route::get('/Post',[PageController::class,'ShowUserPost']);

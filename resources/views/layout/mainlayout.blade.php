@@ -16,14 +16,21 @@
 <nav><a href="/">Home</a>  |  <a href="/About">About</a>  |  <a href="/Post">Post</a></nav>
 <main>
     <article>
+        @hasSection('content')
         @yield('content')
+        @else
+        <h2>No Content Found.</h2>
+        @endif
+        
          </article>
     <aside>
-        <ul>
+       @section('side-bar')
+       <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/About">About</a></li>
             <li><a href="/Post">Post</a></li>
         </ul>
+       @show
     </aside>
 </main>
 <footer id="foot">

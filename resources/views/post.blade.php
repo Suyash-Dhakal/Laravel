@@ -6,3 +6,7 @@
 @section('title')
 Post
 @endsection
+@section('side-bar')
+@parent
+<p>This is appended to the main side bar.</p>
+@endsection
